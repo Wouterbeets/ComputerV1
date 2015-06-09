@@ -12,6 +12,6 @@
 
 all: 
 	go install
-	ComputerV1 "2 * X^2 + 3 * X^1 * 14 * X^2"
+	ComputerV1 "2 * X^2 + 3 * X^1 * 14 * X^2 = 1"
 
 
