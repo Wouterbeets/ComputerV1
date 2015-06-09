@@ -12,16 +12,18 @@ func main() {
 	if flag.NArg() != 1 {
 		usage(nil)
 	} else {
-		eq := &poly.Poly{}
+		eq := &poly.Equa{}
 		err := eq.ParseEq(flag.Arg(0))
 		errorHandel(err)
 		fmt.Printf("%+v\n", eq)
 	}
 }
 
-func errorHandel(err error) {
-	if err != nil {
-		usage(err)
+func errorHandel(err []error) {
+	for _, v := range err {
+		if v != nil {
+			usage(v)
+		}
 	}
 }
 
